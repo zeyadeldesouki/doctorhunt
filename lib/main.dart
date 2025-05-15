@@ -1,6 +1,7 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:doctorhunt/app/doctor_hunt.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const DoctorHunt());
+  runApp(DevicePreview(builder: (context) => const DoctorHunt()));
 }
