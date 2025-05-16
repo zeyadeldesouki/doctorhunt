@@ -89,6 +89,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.8"
+  custom_form_w:
+    dependency: "direct main"
+    description:
+      name: custom_form_w
+      sha256: aad4fc336a48ea37cb9d9272a408842ae1d8797e0d42b32fa3b223d6429e1807
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.5"
   device_frame:
     dependency: transitive
     description:
@@ -173,6 +181,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.4.4"
+  go_router:
+    dependency: "direct main"
+    description:
+      name: go_router
+      sha256: "0b1e06223bee260dee31a171fb1153e306907563a0b0225e8c1733211911429a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "15.1.2"
   html:
     dependency: transitive
     description:
@@ -197,6 +213,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.19.0"
+  intl_phone_field:
+    dependency: transitive
+    description:
+      name: intl_phone_field
+      sha256: "73819d3dfcb68d2c85663606f6842597c3ddf6688ac777f051b17814fe767bbf"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.2.0"
   json_annotation:
     dependency: transitive
     description:
@@ -237,6 +261,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.1.1"
+  logging:
+    dependency: transitive
+    description:
+      name: logging
+      sha256: c8245ada5f1717ed44271ed1c26b8ce85ca3228fd2ffdb75468ab01979309d61
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.3.0"
   matcher:
     dependency: transitive
     description:
