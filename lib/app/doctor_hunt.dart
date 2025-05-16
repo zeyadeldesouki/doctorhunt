@@ -9,7 +9,7 @@ class DoctorHunt extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Doctor Hunt',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: OnboardingView(),
+      home: const OnboardingView(),
     );
   }
 }

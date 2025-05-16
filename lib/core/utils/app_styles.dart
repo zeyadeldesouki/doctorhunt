@@ -2,13 +2,19 @@ import 'package:flutter/material.dart';
 
 class AdaptiveTextSize {
   const AdaptiveTextSize();
-
   double getadaptiveTextSize(BuildContext context, dynamic value) {
     return (value / 720) * MediaQuery.of(context).size.height;
   }
 }
 
 class AppStyles {
+    static TextStyle text12(BuildContext context) {
+    const adaptiveTextSize = AdaptiveTextSize();
+    return TextStyle(
+      fontSize: adaptiveTextSize.getadaptiveTextSize(context, 12),
+      fontWeight: FontWeight.normal,
+    );
+  }
   static TextStyle text14(BuildContext context) {
     const adaptiveTextSize = AdaptiveTextSize();
     return TextStyle(

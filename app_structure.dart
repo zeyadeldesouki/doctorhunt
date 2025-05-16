@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 
 void createFeatureStructure(String featureName) {
@@ -16,7 +17,7 @@ void createFeatureStructure(String featureName) {
     final directory = Directory(dirPath);
     if (!directory.existsSync()) {
       directory.createSync(recursive: true);
-      print('Folder Created: $dirPath');
+      log('Folder Created: $dirPath');
     }
   }
 }
@@ -37,7 +38,7 @@ void createAssetsStructure() {
     final directory = Directory(dir);
     if (!directory.existsSync()) {
       directory.createSync(recursive: true);
-      print('Folder Created: $dir');
+      log('Folder Created: $dir');
     }
   }
 }
@@ -47,7 +48,7 @@ void createFileIfNotExists(String path, String content) {
   if (!file.existsSync()) {
     file.createSync(recursive: true);
     file.writeAsStringSync(content);
-    print('File Created: $path');
+    log('File Created: $path');
   }
 }
 
@@ -69,12 +70,12 @@ void main() {
     final directory = Directory(dir);
     if (!directory.existsSync()) {
       directory.createSync(recursive: true);
-      print('Folder Created: $dir');
+      log('Folder Created: $dir');
     }
   }
 
   // Create feature structures
-  final features = ['onboarding', 'home'];
+  final features = ['onboarding', 'home','sign up','login'];
   for (var feature in features) {
     createFeatureStructure(feature);
   }
