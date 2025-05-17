@@ -61,6 +61,7 @@ class _OnboardingViewState extends State<OnboardingView> {
                   ),
                   const Expanded(child: SizedBox()),
                   CustomButton(
+                    title: "Get Started",
                     onPressed: () {
                       GoRouter.of(context).push(AppRoutes.kSignup);
                     },

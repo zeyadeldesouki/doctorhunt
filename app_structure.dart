@@ -1,5 +1,5 @@
-import 'dart:developer';
 import 'dart:io';
+import 'package:flutter/material.dart';
 
 void createFeatureStructure(String featureName) {
   // Base feature directory structure
@@ -17,7 +17,7 @@ void createFeatureStructure(String featureName) {
     final directory = Directory(dirPath);
     if (!directory.existsSync()) {
       directory.createSync(recursive: true);
-      log('Folder Created: $dirPath');
+      debugPrint('Folder Created: $dirPath');
     }
   }
 }
@@ -38,7 +38,7 @@ void createAssetsStructure() {
     final directory = Directory(dir);
     if (!directory.existsSync()) {
       directory.createSync(recursive: true);
-      log('Folder Created: $dir');
+      debugPrint('Folder Created: $dir');
     }
   }
 }
@@ -48,7 +48,7 @@ void createFileIfNotExists(String path, String content) {
   if (!file.existsSync()) {
     file.createSync(recursive: true);
     file.writeAsStringSync(content);
-    log('File Created: $path');
+    debugPrint('File Created: $path');
   }
 }
 
@@ -70,7 +70,7 @@ void main() {
     final directory = Directory(dir);
     if (!directory.existsSync()) {
       directory.createSync(recursive: true);
-      log('Folder Created: $dir');
+      debugPrint('Folder Created: $dir');
     }
   }
 

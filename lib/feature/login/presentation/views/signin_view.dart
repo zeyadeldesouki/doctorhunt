@@ -11,16 +11,14 @@ import 'package:doctorhunt/feature/sign%20up/presentation/widgets/signup_types.d
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class SignupView extends StatefulWidget {
-  const SignupView({super.key});
+class SigninView extends StatefulWidget {
+  const SigninView({super.key});
 
   @override
-  State<SignupView> createState() => _SignupViewState();
+  State<SigninView> createState() => _SigninViewState();
 }
 
-class _SignupViewState extends State<SignupView> {
-  final TextEditingController nameController = TextEditingController();
-
+class _SigninViewState extends State<SigninView> {
   final TextEditingController emailController = TextEditingController();
 
   final TextEditingController passwordController = TextEditingController();
@@ -28,7 +26,6 @@ class _SignupViewState extends State<SignupView> {
   final GlobalKey<FormState> formKey = GlobalKey();
   @override
   void dispose() {
-    nameController.dispose();
     emailController.dispose();
     passwordController.dispose();
     super.dispose();
@@ -45,7 +42,7 @@ class _SignupViewState extends State<SignupView> {
             children: [
               SizedBox(height: MediaQuery.sizeOf(context).height * 0.1),
               Text(
-                "Join us to start searching",
+                "Welcome back",
                 style: AppStyles.text22(context),
                 textAlign: TextAlign.center,
               ),
@@ -61,12 +58,6 @@ class _SignupViewState extends State<SignupView> {
                 formKey: formKey,
                 showButton: false,
                 children: [
-                  CustomTextField(
-                    hint: "Enter your name",
-                    label: "Name",
-                    isRequired: true,
-                    controller: nameController,
-                  ),
                   CustomTextField(
                     hint: "Enter your email",
                     label: "Email",
@@ -85,11 +76,11 @@ class _SignupViewState extends State<SignupView> {
                 ],
               ),
               CustomButton(
-                title: "Get Started",
+                title: "Login",
                 onPressed: () async {
                   if (formKey.currentState!.validate()) {
                     try {
-                      await AuthService().signUpWithEmailAndPassword(
+                      await AuthService().signInWithEmailAndPassword(
                         emailController.text,
                         passwordController.text,
                       );
@@ -100,6 +91,12 @@ class _SignupViewState extends State<SignupView> {
                       await SecureCacheHelper.setSecureData(
                         key: 'password',
                         value: passwordController.text,
+                      );
+                      debugPrint(
+                        await SecureCacheHelper.getSecureData(key: 'email'),
+                      );
+                      debugPrint(
+                        await SecureCacheHelper.getSecureData(key: 'password'),
                       );
                       showSnackBar(
                         context: context,
@@ -116,16 +113,21 @@ class _SignupViewState extends State<SignupView> {
                 },
               ),
               SizedBox(height: MediaQuery.sizeOf(context).height * 0.02),
+              Text("Forgor password?", style: AppStyles.text14(context)),
+              const Expanded(child: SizedBox()),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Have an account? ", style: AppStyles.text14(context)),
+                  Text(
+                    "Don't have an account? ",
+                    style: AppStyles.text14(context),
+                  ),
                   InkWell(
                     onTap: () {
-                      GoRouter.of(context).push(AppRoutes.kSignIn);
+                      GoRouter.of(context).push(AppRoutes.kSignup);
                     },
                     child: Text(
-                      "Login",
+                      "Join us",
                       style: AppStyles.text14(
                         context,
                       ).copyWith(color: Colors.green),
@@ -133,6 +135,7 @@ class _SignupViewState extends State<SignupView> {
                   ),
                 ],
               ),
+              const SizedBox(height: 10),
             ],
           ),
         ),

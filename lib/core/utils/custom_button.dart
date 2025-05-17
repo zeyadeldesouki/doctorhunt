@@ -2,9 +2,10 @@ import 'package:doctorhunt/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, this.onPressed});
+  const CustomButton({super.key, this.onPressed, required this.title});
 
   final void Function()? onPressed;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class CustomButton extends StatelessWidget {
       ),
       onPressed: onPressed,
       child: Text(
-        "Get Started",
+        title,
         style: AppStyles.text18(context).copyWith(color: Colors.white),
       ),
     );

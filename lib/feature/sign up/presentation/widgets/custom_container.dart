@@ -12,13 +12,16 @@ class CustomContainer extends StatelessWidget {
       width: 160,
       height: 54,
       color: const Color(0xffFFFFFF),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(signupModel.image, width: 25),
-          const SizedBox(width: 10),
-          Text(signupModel.text),
-        ],
+      child: InkWell(
+        onTap: signupModel.onTap,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(signupModel.image, width: 25),
+            const SizedBox(width: 10),
+            Text(signupModel.text),
+          ],
+        ),
       ),
     );
   }
