@@ -7,9 +7,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'My App',
+      title: 'Doctor Hunt',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: OnboardingView(),
+      home: const OnboardingView(),
     );
   }
 }
