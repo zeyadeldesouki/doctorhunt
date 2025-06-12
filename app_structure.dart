@@ -92,7 +92,6 @@ class MyApp extends StatelessWidget {
 
   await createFileIfNotExists('lib/main.dart', '''
 import 'package:flutter/material.dart';
-import 'app/app_name.dart';
 import 'core/errors/crash_view.dart';
 
 void main() {
