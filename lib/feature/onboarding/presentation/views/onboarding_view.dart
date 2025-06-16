@@ -1,7 +1,9 @@
+import 'package:doctorhunt/core/routes/app_routes.dart';
 import 'package:doctorhunt/core/utils/custom_button.dart';
 import 'package:doctorhunt/core/utils/responsive_extension.dart';
 import 'package:doctorhunt/feature/onboarding/data/models/onboarding_model.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class OnboardingView extends StatefulWidget {
   const OnboardingView({super.key});
@@ -63,10 +65,15 @@ class _OnboardingViewState extends State<OnboardingView> {
                     textAlign: TextAlign.center,
                   ),
                   const Expanded(child: SizedBox()),
-                  CustomButton(title: "Get Started", onPressed: () async {}),
-                  const SizedBox(height: 10),
+                  CustomButton(
+                    title: "Get Started",
+                    onPressed: () {
+                      GoRouter.of(context).push(AppRoutes.kSignup);
+                    },
+                  ),
+                  SizedBox(height: context.mediumSpacing),
                   Text("Skip", style: context.responsiveBodyLarge),
-                  SizedBox(height: MediaQuery.sizeOf(context).height * 0.07),
+                  SizedBox(height: context.largeSpacing),
                 ],
               ),
             );

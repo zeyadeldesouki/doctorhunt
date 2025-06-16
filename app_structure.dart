@@ -413,8 +413,9 @@ class CrashView extends StatelessWidget {
                   ? errorDetails.summary.toString()
                   : 'Oops! Something went wrong!',
               textAlign: TextAlign.center,
-              style: context.responsiveBodyLarge.copyWith(
+              style: context.responsiveTitleLarge.copyWith(
                 color: kDebugMode ? Colors.red : Colors.black,
+                fontWeight: FontWeight.bold,
               ),
             ),
             const SizedBox(height: 12),
@@ -423,7 +424,7 @@ class CrashView extends StatelessWidget {
                   ? 'https://docs.flutter.dev/testing/errors'
                   : "We encountered an error and we've notified our engineering team about it. Sorry for the inconvenience caused.",
               textAlign: TextAlign.center,
-              style: context.responsiveBodyMedium,
+              style: context.responsiveBodyLarge,
             ),
           ],
         ),
