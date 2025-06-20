@@ -124,13 +124,13 @@ class AppTextStyle {
   );
 
   static const TextStyle headLineMedium = TextStyle(
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.bold,
     letterSpacing: 0,
     height: 1.29,
   );
 
   static const TextStyle headLineLarge = TextStyle(
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.bold,
     letterSpacing: 0,
     height: 1.25,
   );

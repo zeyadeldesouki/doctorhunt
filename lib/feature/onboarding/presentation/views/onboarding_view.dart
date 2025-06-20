@@ -68,7 +68,7 @@ class _OnboardingViewState extends State<OnboardingView> {
                   CustomButton(
                     title: "Get Started",
                     onPressed: () {
-                      GoRouter.of(context).push(AppRoutes.kSignIn);
+                      GoRouter.of(context).push(AppRoutes.kHome);
                     },
                   ),
                   SizedBox(height: context.mediumSpacing),

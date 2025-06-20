@@ -1,4 +1,5 @@
 import 'package:doctorhunt/core/utils/app_text_style.dart';
+import 'package:doctorhunt/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
@@ -11,7 +12,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.green,
+        backgroundColor: primaryColor,
         minimumSize: Size(MediaQuery.sizeOf(context).width * 0.7, 50),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       ),
