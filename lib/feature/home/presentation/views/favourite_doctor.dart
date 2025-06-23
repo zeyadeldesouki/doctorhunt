@@ -20,6 +20,7 @@ class FavouriteDoctor extends StatelessWidget {
       body: Padding(
         padding: context.allPadding,
         child: CustomScrollView(
+          physics: const BouncingScrollPhysics(),
           slivers: [
             SliverFillRemaining(
               child: Column(

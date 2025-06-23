@@ -1,6 +1,8 @@
+import 'package:doctorhunt/core/routes/app_routes.dart';
 import 'package:doctorhunt/core/utils/responsive_extension.dart';
 import 'package:doctorhunt/feature/home/presentation/widgets/custom_list_tile.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class BookDoctor extends StatelessWidget {
   const BookDoctor({super.key});
@@ -21,10 +23,14 @@ class BookDoctor extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                GoRouter.of(context).push(AppRoutes.kAppointment);
+              },
               child: Text(
                 "Book Now",
-                style: context.responsiveBodyMedium.copyWith(color: Colors.white),
+                style: context.responsiveBodyMedium.copyWith(
+                  color: Colors.white,
+                ),
               ),
             ),
           ),

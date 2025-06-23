@@ -1,3 +1,4 @@
+import 'package:doctorhunt/feature/home/presentation/views/appointment_calendar_view.dart';
 import 'package:doctorhunt/feature/home/presentation/views/appointment_view.dart';
 import 'package:doctorhunt/feature/home/presentation/views/doctor_details.dart';
 import 'package:doctorhunt/feature/home/presentation/views/favourite_doctor.dart';
@@ -14,11 +15,10 @@ class AppRoutes {
   static const kSignIn = '/signin';
   static const kHome = "/home";
   static const kAppointment = '/Appointment';
-  static const kpopular = "/popular";
-  static const kfavourite = "/favourite";
-  static const kdoctordetails = "/resetpassword";
-  static const kForgotVerifiy = "/forgotverifiy";
-  static const kDetails = "/details";
+  static const kPopular = "/popular";
+  static const kFavourite = "/favourite";
+  static const kDoctordetails = "/resetpassword";
+  static const kAppointmentCalendar = "/kappointmentCalendar";
   static final GoRouter router = GoRouter(
     routes: [
       GoRoute(path: kApp, builder: (context, state) => const OnboardingView()),
@@ -26,20 +26,24 @@ class AppRoutes {
       GoRoute(path: kSignIn, builder: (context, state) => const SigninView()),
       GoRoute(path: kHome, builder: (context, state) => const HomeView()),
       GoRoute(
-        path: kpopular,
+        path: kPopular,
         builder: (context, state) => const PopularDoctor(),
       ),
       GoRoute(
-        path: kfavourite,
+        path: kFavourite,
         builder: (context, state) => const FavouriteDoctor(),
       ),
       GoRoute(
-        path: kdoctordetails,
+        path: kDoctordetails,
         builder: (context, state) => const DoctorDetails(),
       ),
       GoRoute(
         path: kAppointment,
         builder: (context, state) => const AppointmentView(),
+      ),
+      GoRoute(
+        path: kAppointmentCalendar,
+        builder: (context, state) => const AppointmentCalendarView(),
       ),
     ],
     // errorBuilder: (context, state) => const ErrorView(),

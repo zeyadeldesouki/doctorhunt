@@ -14,7 +14,7 @@ class BottomBar extends StatelessWidget {
       color: primaryColor,
       onTap: (index) {
         if (index == 1) {
-          GoRouter.of(context).push(AppRoutes.kfavourite);
+          GoRouter.of(context).push(AppRoutes.kFavourite);
         }
       },
       height: 50,

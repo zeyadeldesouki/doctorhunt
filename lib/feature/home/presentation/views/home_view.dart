@@ -42,7 +42,7 @@ class HomeView extends StatelessWidget {
                     title: "Popular Doctors",
                     subtitle: "See all",
                     onPressed: () {
-                      GoRouter.of(context).push(AppRoutes.kpopular);
+                      GoRouter.of(context).push(AppRoutes.kPopular);
                     },
                   ),
                 ),

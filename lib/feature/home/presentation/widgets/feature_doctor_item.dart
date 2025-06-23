@@ -21,14 +21,14 @@ class FeatureDoctorItem extends StatelessWidget {
                   icon: Icon(Icons.favorite, color: Colors.red[400], size: 30),
                 ),
               ),
-              SizedBox(height: context.largeSpacing),
+              SizedBox(height: context.smallSpacing),
               const CircleAvatar(
-                radius: 50,
+                radius: 40,
                 backgroundImage: NetworkImage(
                   "https://th.bing.com/th/id/OIP.0Zdsu_BcU290xG4vk_r97QHaE8?w=261&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
                 ),
               ),
-              SizedBox(height: context.largeSpacing),
+              SizedBox(height: context.smallSpacing),
               Text(
                 "data",
                 style: context.responsiveHeadLineMedium.copyWith(fontSize: 16),

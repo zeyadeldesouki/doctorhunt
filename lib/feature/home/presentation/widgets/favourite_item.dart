@@ -25,7 +25,7 @@ class FavouriteItem extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              GoRouter.of(context).push(AppRoutes.kdoctordetails);
+              GoRouter.of(context).push(AppRoutes.kDoctordetails);
             },
             child: const CircleAvatar(
               radius: 25,
